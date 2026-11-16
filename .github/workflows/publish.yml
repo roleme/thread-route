@@ -48,3 +48,15 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+  scan:
+    needs: publish
+    uses: roleme/workflows/.github/workflows/third-party-scan-reusable.yml@e015d0c3fbc110c878e42449c4cd8bb312090ad4 # v2.13.0
+    permissions:
+      contents: read
+      issues: write
+      packages: read
+    with:
+      osv: false
+      zizmor: false
+      trivy-images: ghcr.io/roleme/thread-route:latest
