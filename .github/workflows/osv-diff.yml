@@ -7,7 +7,7 @@ permissions: {}
 
 jobs:
   osv-diff:
-    uses: roleme/workflows/.github/workflows/osv-diff-reusable.yml@398745c19b88f0a1678ac36f15dd3b8b891a0a68 # v2.10.0
+    uses: roleme/workflows/.github/workflows/osv-diff-reusable.yml@b4744262dd52d381c5868d9b22b40dc16584366e # v2.14.0
     permissions:
       actions: read
       contents: read
